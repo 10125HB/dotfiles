@@ -8,12 +8,12 @@ parse_git_branch () {
 
 # sunburst.vim like colors for prompt
 BLACK=$'\033[0m'
-RED=$'\033[38;5;167m'
+RED=$'\033[38;5;160m'
 GREEN=$'\033[38;5;71m'
-BLUE=$'\033[38;5;111m'
+BLUE=$'\033[38;5;105m'
 YELLOW=$'\033[38;5;228m'
 ORANGE=$'\033[38;5;173m'
 
 function precmd() {
-    export PROMPT="%{$RED%}%n@%m%{$BLACK%}:%{$GREEN%}%~%{$YELLOW%}$(parse_git_branch)%{$BLACK%}%# "
+    export PROMPT="%{$RED%}%n%{$BLUE%}@%m%{$BLACK%}:%{$GREEN%}%~%{$YELLOW%}$(parse_git_branch)%{$BLACK%}%# "
 }
